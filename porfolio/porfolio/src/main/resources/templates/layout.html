@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title} + ' - Portfolio'">Portfolio</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a th:href="@{/}">Portfolio</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a th:href="@{/}" th:classappend="${title == 'Home'} ? 'active'">Home</a></li>
+                <li><a th:href="@{/about}" th:classappend="${title == 'About'} ? 'active'">About</a></li>
+                <li><a th:href="@{/skills}" th:classappend="${title == 'Skills'} ? 'active'">Skills</a></li>
+                <li><a th:href="@{/projects}" th:classappend="${title == 'Projects'} ? 'active'">Projects</a></li>
+                <li><a th:href="@{/contact}" th:classappend="${title == 'Contact'} ? 'active'">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div th:include="${content}"></div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Portfolio. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

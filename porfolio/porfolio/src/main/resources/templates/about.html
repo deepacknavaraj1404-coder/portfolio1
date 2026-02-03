@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments :: head}">
+</head>
+
+<body>
+    <div th:replace="~{fragments :: navbar}"></div>
+
+    <main class="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>About Me</h1>
+                <p>Get to know more about my journey and passion</p>
+            </div>
+        </section>
+
+        <section class="about-content">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img th:src="@{/images/profile.jpg}"
+                            src="https://ui-avatars.com/api/?name=Deepack+Navaraj&background=4f46e5&color=fff&size=300"
+                            alt="Deepack Navaraj" class="profile-photo">
+                    </div>
+                    <div class="about-text">
+                        <h2>Hello, I'm a Developer DEEPACK NAVARAJ</h2>
+                        <p>
+                            I'm a passionate software developer with a love for creating innovative solutions
+                            and beautiful user experiences. With expertise in modern web technologies, I bring
+                            ideas to life through clean code and thoughtful design.
+                        </p>
+                        <p>
+                            My journey in software development started with curiosity and has evolved into a
+                            career focused on building scalable applications and solving complex problems.
+                            I believe in continuous learning and staying updated with the latest technologies.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <h3>3</h3>
+                                <p>Projects Completed</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>FRESHER</h3>
+                                <p> Experience</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>3</h3>
+                                <p>CODING LANGUAGES</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div th:replace="~{fragments :: footer}"></div>
+</body>
+
+</html>

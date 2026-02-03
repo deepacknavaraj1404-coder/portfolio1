@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments :: head}">
+</head>
+
+<body>
+    <div th:replace="~{fragments :: navbar}"></div>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Welcome to My Portfolio</h1>
+                    <p class="hero-subtitle">I'm a passionate developer creating amazing digital experiences</p>
+                    <div class="hero-buttons">
+                        <a th:href="@{/projects}" class="btn btn-primary">View My Work</a>
+                        <a th:href="@{/contact}" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-code feature-icon"></i>
+                        <h3>Clean Code</h3>
+                        <p>Writing maintainable and efficient code following best practices</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-mobile-alt feature-icon"></i>
+                        <h3>Responsive Design</h3>
+                        <p>Creating beautiful interfaces that work on all devices</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-rocket feature-icon"></i>
+                        <h3>Performance</h3>
+                        <p>Optimizing applications for speed and scalability</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div th:replace="~{fragments :: footer}"></div>
+</body>
+
+</html>
